@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace Mvc_project.Controllers
 {
-    public class HomeController : Controller
+    public class AccountController : Controller
     {
-        // GET: Home
-        public ActionResult Home()
+        // GET: Account
+        public ActionResult Account()
         {
             return View();
         }
