@@ -1,0 +1,27 @@
+﻿@helper GetTreeView(List<Mvc_project.SiteMenu> siteMenu, int parentID)
+{
+foreach (var i in siteMenu.Where(a => a.ParentMenuID.Equals(parentID)))
+{
+        <li>
+            @{var submenu = siteMenu.Where(a => a.ParentMenuID.Equals(i.ID)).Count();}
+            @if (submenu > 0)
+            {
+                <span class="collapse collapsible">&nbsp;</span>
+            }
+            else
+            {
+                <span style="width:15px; display:inline-block">&nbsp;</span>
+            }
+            <span>
+                <a href="@i.NavURL">@i.OrderMenu </a>
+            </span>
+            @if (submenu > 0)
+            {
+                <ul>
+                    @Treeview.GetTreeView(siteMenu, i.ID)
+                    @* Recursive  Call for Populate Sub items here*@
+                </ul>
+            }
+        </li>
+                }
+}
