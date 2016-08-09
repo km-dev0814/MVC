@@ -1,0 +1,43 @@
+﻿@model Mvc_project.SiteMenu
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SiteMenu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderMenu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderMenu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NavURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NavURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentMenuID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentMenuID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

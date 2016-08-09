@@ -12,7 +12,7 @@ namespace Mvc_project.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "My Home page.";
-            return RedirectToAction("simple", "Treeview");
+            return View();
         }
 
         public ActionResult About()
