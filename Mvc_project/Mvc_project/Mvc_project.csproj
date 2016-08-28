@@ -152,7 +152,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
-    <Content Include="Images\HeaderBackground.jpg" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\icon_sprites.png" />
     <Content Include="Images\orderedList0.png" />
